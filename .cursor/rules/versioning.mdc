@@ -12,6 +12,7 @@ A versão canônica do pacote está em **`VERSION`** na raiz do repositório (se
 Sempre que houver release ou mudança de versão anunciada, **atualize `VERSION` no mesmo PR/commit** que:
 
 - `CHANGELOG.md` (nova seção ou release)
+- **`README.md`** (versão, features, exemplos, links Packagist)
 - Docs VitePress (leem `VERSION` via `docs/.vitepress/read-version.ts` no build)
 - Tag Git semver (quando o usuário publicar)
 

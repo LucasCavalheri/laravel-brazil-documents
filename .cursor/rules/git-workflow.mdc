@@ -1,0 +1,109 @@
+---
+description: Branch, commit, and PR conventions (English) — always suggest to the user
+alwaysApply: true
+---
+
+# Git workflow (English only)
+
+**Language:** branch names, commit messages, PR titles, and PR descriptions must always be in **English**.
+
+**Version prefix:** read **`VERSION`** at repo root (e.g. `1.0.0` → use `[1.0]` in PR titles; `2.1.3` → `[2.1]`).
+
+## Agent duty (every completed task)
+
+When finishing work (or when the user may commit/open a PR), **always provide**:
+
+1. Suggested **branch name**
+2. Suggested **commit message** (Conventional Commits)
+3. Suggested **PR title** — must start with `[M.m]` from `VERSION`
+4. Suggested **PR description** — full Markdown body (see template below)
+
+Do not commit unless the user explicitly asks.
+
+## Branch names
+
+Pattern: `{type}/{short-kebab-summary}`
+
+| Type | When |
+|------|------|
+| `feat/` | New feature or document type |
+| `fix/` | Bug fix |
+| `docs/` | README, CHANGELOG, VitePress only |
+| `chore/` | CI, deps, tooling |
+| `test/` | Tests only |
+
+Examples:
+
+- `feat/cpf-generation`
+- `fix/cnpj-repeated-digits`
+- `docs/packagist-readme`
+
+## Commit messages
+
+[Conventional Commits](https://www.conventionalcommits.org/), imperative mood, English:
+
+```
+<type>(<optional-scope>): <short summary>
+
+<optional body — what and why, not file list>
+```
+
+Types: `feat`, `fix`, `docs`, `test`, `chore`, `refactor`.
+
+Examples:
+
+```
+feat(cpf): add check-digit validation for repeated sequences
+docs: sync README with Packagist install instructions
+chore(ci): run tests on PHP 8.3 and 8.4
+```
+
+## PR title
+
+**Required format:**
+
+```
+[M.m] <concise title in English>
+```
+
+- `[M.m]` = major and minor from `VERSION` (`1.0.0` → `[1.0]`)
+- Title: imperative, ~72 chars, no period at end
+
+Examples:
+
+- `[1.0] Add Laravel validation rules for CPF, CNPJ, and CEP`
+- `[1.0] Fix CEP repeated-digit rejection`
+
+## PR description (Markdown)
+
+Always output a complete Markdown block the user can paste into GitHub:
+
+```markdown
+## Summary
+
+- Bullet 1: what changed
+- Bullet 2: why it matters
+
+## Changes
+
+- [ ] Source / API
+- [ ] Tests (`composer test`)
+- [ ] `README.md`
+- [ ] `CHANGELOG.md` / `VERSION` (if release)
+- [ ] Docs `docs/` + `docs/en/` (if user-facing)
+
+## Test plan
+
+- [ ] `composer test`
+- [ ] Manual steps if any
+
+## Related
+
+- Closes #issue (if applicable)
+```
+
+Adjust checkboxes and sections to match the actual PR.
+
+## Releases
+
+When bumping version, same PR should update `VERSION`, `CHANGELOG.md`, and `README.md`; PR title still uses the **new** `[M.m]` after bump.

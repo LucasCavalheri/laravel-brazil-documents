@@ -65,8 +65,10 @@ Mesmo padrão para CNPJ e CEP (CEP sem `generate()`).
 1. Ler código existente antes de escrever (mesmo padrão do documento mais próximo)
 2. Implementar Support primeiro, depois handler/rule/VO
 3. Rodar `composer test` após mudanças PHP
-4. Atualizar docs bilíngues se a API mudou
-5. Não commitar/push sem pedido explícito
+4. Atualizar **`README.md`** + docs bilíngues se a API ou instalação mudou
+5. Packagist: https://packagist.org/packages/cavalheri/laravel-brazil-documents
+6. Não commitar/push sem pedido explícito
+7. **Sempre sugerir** (English): branch name, commit message, PR title `[M.m] …` from `VERSION`, PR body (Markdown) — see `git-workflow.mdc`
 
 ## Comandos
 

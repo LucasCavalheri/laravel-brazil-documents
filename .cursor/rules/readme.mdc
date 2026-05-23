@@ -1,0 +1,44 @@
+---
+description: Manter README.md sincronizado com o pacote publicado
+alwaysApply: true
+---
+
+# README.md
+
+O **`README.md`** é a vitrine do pacote no GitHub e no [Packagist](https://packagist.org/packages/cavalheri/laravel-brazil-documents). **Atualize-o em todo change set** que altere comportamento público, escopo ou DX.
+
+## Quando atualizar (obrigatório)
+
+- Nova feature, documento ou API pública
+- Mudança de instalação, config ou exemplos de uso
+- Release de versão (`VERSION` / tag)
+- Novos links (docs, CI, Packagist, autor)
+- Correção que muda comportamento documentado
+
+## Checklist por alteração
+
+1. Badges ainda válidos (Packagist, tests, license)
+2. Seção **Installation** com `composer require cavalheri/laravel-brazil-documents`
+3. Versão atual referenciando [`VERSION`](VERSION) ou valor explícito após release
+4. Exemplos de código refletem a API real (`Facade`, `Support`, `Rules`, helpers)
+5. Links de documentação (pt-BR + `/en/`) e [Packagist](https://packagist.org/packages/cavalheri/laravel-brazil-documents)
+6. Roadmap alinhado ao escopo (não listar como feito o que não existe)
+
+## Sincronizar com
+
+| Arquivo | Motivo |
+|---------|--------|
+| `VERSION` | Versão citada no README |
+| `CHANGELOG.md` | Releases |
+| `docs/` e `docs/en/` | Docs detalhadas (README = resumo) |
+
+## Tom
+
+- Inglês no README (padrão Packagist/GitHub internacional)
+- Branch, commit e PR: inglês (`git-workflow.mdc`); respostas ao usuário: português
+- Links do autor: [Lucas Cavalheri](https://lucascavalheri.com.br), [GitHub](https://github.com/LucasCavalheri), [LinkedIn](https://linkedin.com/in/lucas-cavalheri)
+
+## Não fazer
+
+- Deixar README desatualizado “só com docs” — Packagist renderiza o README
+- Quebrar markdown (linhas coladas, listas sem quebra)
