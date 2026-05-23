@@ -8,7 +8,7 @@
 
 An elegant, Laravel-first toolkit for validating, formatting, sanitizing, and generating Brazilian documents.
 
-**Version 1** includes **CPF**, **CNPJ**, and **CEP**. Current version: see [`VERSION`](VERSION). The architecture is prepared for future document types.
+**Version 1** includes **CPF**, **CNPJ**, and **CEP**. Current version: **1.0.1** (see [`VERSION`](VERSION)). The architecture is prepared for future document types.
 
 **Author:** [Lucas Cavalheri](https://lucascavalheri.com.br) · [GitHub](https://github.com/LucasCavalheri) · [LinkedIn](https://linkedin.com/in/lucas-cavalheri)
 
@@ -214,6 +214,8 @@ composer test
 Follow PSR-12 and keep the public API consistent with existing document handlers.
 
 For AI-assisted development, see [AGENTS.md](AGENTS.md) and [CLAUDE.md](CLAUDE.md). Cursor rules live in `.cursor/rules/`.
+
+See [SECURITY.md](SECURITY.md) to report vulnerabilities privately.
 
 ## License
 
