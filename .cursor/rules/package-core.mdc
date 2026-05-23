@@ -39,8 +39,8 @@ CPF, CNPJ, CEP apenas. Não implementar CNH, PIS, CNS, etc. sem pedido explícit
 
 ```bash
 composer test          # Pest
-npm run docs:dev       # Docs pt-BR + /en/
-npm run docs:build
+npm run dev            # Docs local (pt-BR + /en/)
+npm run build          # Build docs (mesmo comando da Vercel)
 ```
 
 ## Git (English)

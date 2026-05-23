@@ -100,7 +100,8 @@ npm run docs:build
 ## Git e CI
 
 - **Não commitar** sem pedido explícito do usuário
-- Workflows: `.github/workflows/tests.yml` (PHP 8.3/8.4), `docs.yml` (GitHub Pages)
+- Workflows: `.github/workflows/tests.yml` (PHP 8.3/8.4), `docs.yml` (valida build VitePress)
+- Docs (produção): https://laravel-brazil-documents.lucascavalheri.com.br (Vercel; deploy automático)
 - CHANGELOG: [Keep a Changelog](https://keepachangelog.com/)
 
 ### Sempre sugerir ao usuário (em inglês)

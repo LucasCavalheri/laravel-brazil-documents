@@ -11,7 +11,7 @@ hero:
       link: /installation
     - theme: alt
       text: Ver no GitHub
-      link: https://github.com/cavalheri/laravel-brazil-documents
+      link: https://github.com/LucasCavalheri/laravel-brazil-documents
 
 features:
   - title: Laravel-first

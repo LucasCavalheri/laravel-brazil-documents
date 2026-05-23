@@ -59,6 +59,7 @@ Mesmo padrão para CNPJ e CEP (CEP sem `generate()`).
 - Config: `docs/.vitepress/config.mts` (`locales.root` + `locales.en`)
 - Versão na docs: ler **`VERSION`** via `docs/.vitepress/read-version.ts` (nunca hardcodar)
 - Autor: Lucas Cavalheri — https://lucascavalheri.com.br · https://github.com/LucasCavalheri · https://linkedin.com/in/lucas-cavalheri
+- Docs (Vercel): https://laravel-brazil-documents.lucascavalheri.com.br · `base: '/'` no VitePress
 
 ## Workflow do agente
 

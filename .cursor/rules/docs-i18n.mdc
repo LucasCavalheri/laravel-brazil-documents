@@ -33,11 +33,14 @@ Links do hero no locale correto:
 
 Manter snippets PHP idênticos entre idiomas; traduzir apenas títulos e prosa.
 
-## Build
+## Build e deploy
 
 ```bash
-npm run docs:dev
-npm run docs:build
+npm run dev      # preview local
+npm run build    # build de produção
 ```
 
-Deploy GitHub Pages usa `VITEPRESS_BASE=/laravel-brazil-documents/`.
+- **Produção:** [laravel-brazil-documents.lucascavalheri.com.br](https://laravel-brazil-documents.lucascavalheri.com.br) (Vercel)
+- **VitePress `base`:** `/` (domínio customizado na raiz; não usar subpath `/laravel-brazil-documents/`)
+- **CI:** `.github/workflows/docs.yml` só valida o build; deploy é feito pela Vercel (`vercel.json`)
+- Ao mudar URL da doc, atualizar `docs/.vitepress/author.ts` (`docsUrl`) e `README.md`

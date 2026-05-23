@@ -3,7 +3,8 @@
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/cavalheri/laravel-brazil-documents.svg)](https://packagist.org/packages/cavalheri/laravel-brazil-documents)
 [![Total Downloads](https://img.shields.io/packagist/dt/cavalheri/laravel-brazil-documents.svg)](https://packagist.org/packages/cavalheri/laravel-brazil-documents)
 [![License](https://img.shields.io/packagist/l/cavalheri/laravel-brazil-documents.svg)](https://packagist.org/packages/cavalheri/laravel-brazil-documents)
-[![Tests](https://github.com/cavalheri/laravel-brazil-documents/actions/workflows/tests.yml/badge.svg)](https://github.com/cavalheri/laravel-brazil-documents/actions/workflows/tests.yml)
+[![Tests](https://github.com/LucasCavalheri/laravel-brazil-documents/actions/workflows/tests.yml/badge.svg)](https://github.com/LucasCavalheri/laravel-brazil-documents/actions/workflows/tests.yml)
+[![Documentation](https://github.com/LucasCavalheri/laravel-brazil-documents/actions/workflows/docs.yml/badge.svg)](https://github.com/LucasCavalheri/laravel-brazil-documents/actions/workflows/docs.yml)
 
 An elegant, Laravel-first toolkit for validating, formatting, sanitizing, and generating Brazilian documents.
 
@@ -20,15 +21,16 @@ An elegant, Laravel-first toolkit for validating, formatting, sanitizing, and ge
 
 ## Documentation
 
-Documentação completa (padrão **pt-BR**): [cavalheri.github.io/laravel-brazil-documents](https://cavalheri.github.io/laravel-brazil-documents/)
+Hosted on [Vercel](https://vercel.com):
 
-English version: [/en/](https://cavalheri.github.io/laravel-brazil-documents/en/)
+- **pt-BR (default):** [laravel-brazil-documents.lucascavalheri.com.br](https://laravel-brazil-documents.lucascavalheri.com.br)
+- **English:** [/en/](https://laravel-brazil-documents.lucascavalheri.com.br/en/)
 
 Local preview:
 
 ```bash
 npm install
-npm run docs:dev
+npm run dev
 ```
 
 ## Changelog
