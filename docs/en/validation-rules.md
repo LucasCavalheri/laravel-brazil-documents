@@ -7,6 +7,7 @@ use Cavalheri\LaravelBrazilDocuments\Rules\Cep;
 use Cavalheri\LaravelBrazilDocuments\Rules\Cnh;
 use Cavalheri\LaravelBrazilDocuments\Rules\Pis;
 use Cavalheri\LaravelBrazilDocuments\Rules\Cns;
+use Cavalheri\LaravelBrazilDocuments\Rules\TituloEleitor;
 
 $request->validate([
     'cpf' => ['required', new Cpf],
@@ -15,6 +16,7 @@ $request->validate([
     'cnh' => ['required', new Cnh],
     'pis' => ['required', new Pis],
     'cns' => ['required', new Cns],
+    'titulo_eleitor' => ['required', new TituloEleitor],
 ]);
 ```
 

@@ -10,12 +10,12 @@
 | CNH | Validate, format, sanitize, generate (registration number) |
 | PIS/PASEP | Validate, format, sanitize, generate (NIS) |
 | CNS | Validate, format, sanitize, generate (definitive and provisional) |
+| Voter ID | Validate, format, sanitize, generate |
 
 ## Planned
 
 | Document | Scope |
 | -------- | ----- |
-| Voter ID | Voter registration validation |
 | State registration | Per-state (UF) strategies |
 | PIX keys | Email, phone, EVP, CPF/CNPJ |
 | Boleto | Linha digitável and barcode (FEBRABAN) |

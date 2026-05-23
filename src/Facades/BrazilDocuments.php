@@ -11,6 +11,7 @@ use Cavalheri\LaravelBrazilDocuments\Services\Documents\CnpjHandler;
 use Cavalheri\LaravelBrazilDocuments\Services\Documents\CpfHandler;
 use Cavalheri\LaravelBrazilDocuments\Services\Documents\CnsHandler;
 use Cavalheri\LaravelBrazilDocuments\Services\Documents\PisHandler;
+use Cavalheri\LaravelBrazilDocuments\Services\Documents\TituloEleitorHandler;
 use Illuminate\Support\Facades\Facade;
 
 /**
@@ -20,6 +21,7 @@ use Illuminate\Support\Facades\Facade;
  * @method static CnhHandler cnh(?string $value = null)
  * @method static PisHandler pis(?string $value = null)
  * @method static CnsHandler cns(?string $value = null)
+ * @method static TituloEleitorHandler tituloEleitor(?string $value = null)
  *
  * @see BrazilDocumentsManager
  */

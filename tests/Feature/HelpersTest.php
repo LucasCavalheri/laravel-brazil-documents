@@ -9,5 +9,6 @@ it('exposes global helpers', function () {
         ->and(cnh('12345678900')->format())->toBe('123.456.789.00')
         ->and(pis('12056413177')->format())->toBe('120.56413.17-7')
         ->and(cns('279802393660003')->format())->toBe('279 8023 9366 0003')
+        ->and(tituloEleitor('825169091279')->format())->toBe('8251 6909 1279')
         ->and(cpf()->generate())->toHaveLength(11);
 });

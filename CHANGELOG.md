@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.4.0] - 2026-05-23
+
+### Added
+
+- Voter ID (Título de eleitor) validation, formatting, sanitization, and generation
+- Modulo 11 check digits with state code validation (UF 01–28)
+- `Support\TituloEleitor`, `TituloEleitorValue`, `Rules\TituloEleitor`, `tituloEleitor()` helper, and `BrazilDocuments::tituloEleitor()` facade API
+- English and Brazilian Portuguese validation messages
+- Documentation pages for voter ID (pt-BR and English)
+
 ## [1.3.0] - 2026-05-23
 
 ### Added
@@ -69,7 +79,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Rejection of repeated digit sequences (e.g. `11111111111`)
 - Pest test suite with Orchestra Testbench for Laravel 13
 
-[Unreleased]: https://github.com/LucasCavalheri/laravel-brazil-documents/compare/v1.3.0...HEAD
+[Unreleased]: https://github.com/LucasCavalheri/laravel-brazil-documents/compare/v1.4.0...HEAD
+[1.4.0]: https://github.com/LucasCavalheri/laravel-brazil-documents/compare/v1.3.0...v1.4.0
 [1.3.0]: https://github.com/LucasCavalheri/laravel-brazil-documents/compare/v1.2.0...v1.3.0
 [1.2.0]: https://github.com/LucasCavalheri/laravel-brazil-documents/compare/v1.1.0...v1.2.0
 [1.1.0]: https://github.com/LucasCavalheri/laravel-brazil-documents/compare/v1.0.1...v1.1.0

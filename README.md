@@ -8,7 +8,7 @@
 
 An elegant, Laravel-first toolkit for validating, formatting, sanitizing, and generating Brazilian documents.
 
-Includes **CPF**, **CNPJ**, **CEP**, **CNH**, **PIS/PASEP**, and **CNS**. Current version: **1.3.0** (see [`VERSION`](VERSION)). The architecture is prepared for future document types.
+Includes **CPF**, **CNPJ**, **CEP**, **CNH**, **PIS/PASEP**, **CNS**, and **Título de eleitor**. Current version: **1.4.0** (see [`VERSION`](VERSION)). The architecture is prepared for future document types.
 
 **Author:** [Lucas Cavalheri](https://lucascavalheri.com.br) · [GitHub](https://github.com/LucasCavalheri) · [LinkedIn](https://linkedin.com/in/lucas-cavalheri)
 
@@ -62,7 +62,7 @@ return [
 ];
 ```
 
-- **helpers** — Registers global `cpf()`, `cnpj()`, `cep()`, `cnh()`, `pis()`, and `cns()` helpers when `true`.
+- **helpers** — Registers global `cpf()`, `cnpj()`, `cep()`, `cnh()`, `pis()`, `cns()`, and `tituloEleitor()` helpers when `true`.
 - **locale** — Overrides the locale used for validation messages. When `null`, Laravel's current locale is used.
 
 ## Quick Start
@@ -87,6 +87,9 @@ BrazilDocuments::pis('12056413177')->format();
 
 BrazilDocuments::cns('279802393660003')->isValid();
 BrazilDocuments::cns('279802393660003')->format();
+
+BrazilDocuments::tituloEleitor('825169091279')->isValid();
+BrazilDocuments::tituloEleitor('825169091279')->format();
 ```
 
 ### Support classes
@@ -98,6 +101,7 @@ use Cavalheri\LaravelBrazilDocuments\Support\Cep;
 use Cavalheri\LaravelBrazilDocuments\Support\Cnh;
 use Cavalheri\LaravelBrazilDocuments\Support\Pis;
 use Cavalheri\LaravelBrazilDocuments\Support\Cns;
+use Cavalheri\LaravelBrazilDocuments\Support\TituloEleitor;
 
 Cpf::isValid('12345678909');
 Cpf::format('12345678909');
@@ -124,6 +128,7 @@ use Cavalheri\LaravelBrazilDocuments\Rules\Cep;
 use Cavalheri\LaravelBrazilDocuments\Rules\Cnh;
 use Cavalheri\LaravelBrazilDocuments\Rules\Pis;
 use Cavalheri\LaravelBrazilDocuments\Rules\Cns;
+use Cavalheri\LaravelBrazilDocuments\Rules\TituloEleitor;
 
 $request->validate([
     'cpf' => ['required', new Cpf],
@@ -132,6 +137,7 @@ $request->validate([
     'cnh' => ['required', new Cnh],
     'pis' => ['required', new Pis],
     'cns' => ['required', new Cns],
+    'titulo_eleitor' => ['required', new TituloEleitor],
 ]);
 ```
 
@@ -146,6 +152,7 @@ cep('01001000')->format();
 cnh('12345678900')->format();
 pis('12056413177')->format();
 cns('279802393660003')->format();
+tituloEleitor('825169091279')->format();
 ```
 
 ## Localization
@@ -215,7 +222,6 @@ tests/
 
 Planned document types for future releases:
 
-- Voter ID (Título de Eleitor)
 - State registration (Inscrição Estadual)
 - PIX keys
 - Boleto validation

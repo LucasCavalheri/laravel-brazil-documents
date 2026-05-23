@@ -10,12 +10,12 @@
 | CNH | Validar, formatar, sanitizar, gerar (número de registro) |
 | PIS/PASEP | Validar, formatar, sanitizar, gerar (NIS) |
 | CNS | Validar, formatar, sanitizar, gerar (definitivo e provisório) |
+| Título de eleitor | Validar, formatar, sanitizar, gerar |
 
 ## Planejado
 
 | Documento           | Escopo                                              |
 | ------------------- | --------------------------------------------------- |
-| Título de eleitor   | Validação de título de eleitor                      |
 | Inscrição estadual  | Estratégias por UF (SP, MG, etc.)                   |
 | Chaves PIX          | E-mail, telefone, EVP, CPF/CNPJ                     |
 | Boleto              | Linha digitável e código de barras (FEBRABAN)       |
