@@ -7,9 +7,11 @@
 
 An elegant, Laravel-first toolkit for validating, formatting, sanitizing, and generating Brazilian documents.
 
-**Version 1** includes **CPF**, **CNPJ**, and **CEP**. Current version: see [`VERSION`](VERSION).
+**Version 1** includes **CPF**, **CNPJ**, and **CEP**. Current version: see [`VERSION`](VERSION). The architecture is prepared for future document types.
 
-**Author:** [Lucas Cavalheri](https://lucascavalheri.com.br) · [GitHub](https://github.com/LucasCavalheri) · [LinkedIn](https://linkedin.com/in/lucas-cavalheri) The architecture is prepared for future document types.
+**Author:** [Lucas Cavalheri](https://lucascavalheri.com.br) · [GitHub](https://github.com/LucasCavalheri) · [LinkedIn](https://linkedin.com/in/lucas-cavalheri)
+
+**Install via Composer:** [packagist.org/packages/cavalheri/laravel-brazil-documents](https://packagist.org/packages/cavalheri/laravel-brazil-documents)
 
 ## Requirements
 
@@ -34,6 +36,8 @@ npm run docs:dev
 See [CHANGELOG.md](CHANGELOG.md) for release notes.
 
 ## Installation
+
+Published on [Packagist](https://packagist.org/packages/cavalheri/laravel-brazil-documents):
 
 ```bash
 composer require cavalheri/laravel-brazil-documents

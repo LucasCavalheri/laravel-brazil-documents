@@ -14,6 +14,7 @@ Pacote Laravel open-source para **validação**, **formatação**, **sanitizaç�
 | Laravel | 13.x |
 | Docs | VitePress — **pt-BR padrão**, inglês em `/en/` |
 | Versão | Arquivo **`VERSION`** na raiz (lido pela documentação) |
+| Packagist | https://packagist.org/packages/cavalheri/laravel-brazil-documents |
 
 ### Escopo atual (v1)
 
@@ -56,7 +57,8 @@ src/
 6. **Testes Pest** — Unit para Support; Feature para Laravel (rules, facade, i18n).
 7. **Traduções** — `resources/lang/en/` e `pt_BR/`; chaves em `validation.php`.
 8. **Documentação** — sempre `docs/` (pt-BR) **e** `docs/en/` (inglês).
-9. **`VERSION`** — ao alterar versão do pacote, atualizar `VERSION` + `CHANGELOG.md`; docs usam `docs/.vitepress/read-version.ts`.
+9. **`VERSION`** — ao alterar versão do pacote, atualizar `VERSION` + `CHANGELOG.md` + **`README.md`**; docs usam `docs/.vitepress/read-version.ts`.
+10. **`README.md`** — atualizar em toda mudança de API, instalação, versão ou DX (vitrine Packagist/GitHub).
 
 **Autor do pacote:** Lucas Cavalheri — [lucascavalheri.com.br](https://lucascavalheri.com.br) · [GitHub](https://github.com/LucasCavalheri) · [LinkedIn](https://linkedin.com/in/lucas-cavalheri)
 
@@ -101,6 +103,19 @@ npm run docs:build
 - Workflows: `.github/workflows/tests.yml` (PHP 8.3/8.4), `docs.yml` (GitHub Pages)
 - CHANGELOG: [Keep a Changelog](https://keepachangelog.com/)
 
+### Sempre sugerir ao usuário (em inglês)
+
+Após implementar mudanças, fornecer:
+
+1. **Branch** — ex.: `feat/cpf-generation`
+2. **Commit** — Conventional Commits, ex.: `feat(cpf): add check-digit validation`
+3. **PR title** — `[M.m] Title` onde `M.m` vem de `VERSION` (`1.0.0` → `[1.0]`)
+4. **PR description** — corpo completo em Markdown (Summary, Changes, Test plan)
+
+Detalhes: `.cursor/rules/git-workflow.mdc`
+
+**Responder ao usuário em português**; branch/commit/PR **sempre em inglês**.
+
 ---
 
 ## Cursor rules
@@ -114,6 +129,8 @@ Regras detalhadas em `.cursor/rules/`:
 | `tests-pest.mdc` | `tests/**/*` |
 | `docs-i18n.mdc` | `docs/**/*` |
 | `versioning.mdc` | Sempre ativo (`VERSION`) |
+| `readme.mdc` | Sempre ativo (`README.md`) |
+| `git-workflow.mdc` | Sempre ativo (branch, commit, PR em inglês) |
 
 ---
 

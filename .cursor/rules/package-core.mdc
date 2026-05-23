@@ -31,8 +31,9 @@ CPF, CNPJ, CEP apenas. Não implementar CNH, PIS, CNS, etc. sem pedido explícit
 ## Versão
 
 - Fonte única: arquivo **`VERSION`** na raiz (semver)
-- Ao mudar versão do pacote, atualizar `VERSION` + `CHANGELOG.md` no mesmo commit
+- Ao mudar versão do pacote, atualizar `VERSION` + `CHANGELOG.md` + **`README.md`** no mesmo commit
 - Docs leem via `docs/.vitepress/read-version.ts` — não hardcodar versão em markdown
+- Packagist: https://packagist.org/packages/cavalheri/laravel-brazil-documents
 
 ## Comandos
 
@@ -42,6 +43,8 @@ npm run docs:dev       # Docs pt-BR + /en/
 npm run docs:build
 ```
 
-## Commits
+## Git (English)
+
+Ao concluir tarefas, **sempre sugerir** (em inglês): nome de branch, mensagem de commit, título de PR `[M.m] …` (de `VERSION`) e descrição de PR em Markdown. Ver `git-workflow.mdc`.
 
 Só commitar quando o usuário pedir explicitamente.
