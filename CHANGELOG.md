@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Documentation hosted on Vercel at [laravel-brazil-documents.lucascavalheri.com.br](https://laravel-brazil-documents.lucascavalheri.com.br)
+- GitHub Actions `docs.yml` validates VitePress build only (no GitHub Pages deploy)
+- VitePress `base` set to `/` for custom domain
+
 ## [1.0.0] - 2026-05-23
 
 ### Added
@@ -24,5 +30,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Rejection of repeated digit sequences (e.g. `11111111111`)
 - Pest test suite with Orchestra Testbench for Laravel 13
 
-[Unreleased]: https://github.com/cavalheri/laravel-brazil-documents/compare/v1.0.0...HEAD
-[1.0.0]: https://github.com/cavalheri/laravel-brazil-documents/releases/tag/v1.0.0
+[Unreleased]: https://github.com/LucasCavalheri/laravel-brazil-documents/compare/v1.0.0...HEAD
+[1.0.0]: https://github.com/LucasCavalheri/laravel-brazil-documents/releases/tag/v1.0.0

@@ -90,7 +90,7 @@ Always output a complete Markdown block the user can paste into GitHub:
 - [ ] Tests (`composer test`)
 - [ ] `README.md`
 - [ ] `CHANGELOG.md` / `VERSION` (if release)
-- [ ] Docs `docs/` + `docs/en/` (if user-facing)
+- [ ] Docs `docs/` + `docs/en/` (if user-facing; production on Vercel)
 
 ## Test plan
 

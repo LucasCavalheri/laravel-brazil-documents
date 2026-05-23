@@ -1,13 +1,10 @@
 import { defineConfig } from 'vitepress'
-import { author } from './author'
+import { author, packageGithub } from './author'
 import { readPackageVersion } from './read-version'
 
 const version = readPackageVersion()
 
-const editLinkPattern =
-  'https://github.com/cavalheri/laravel-brazil-documents/edit/main/docs/:path'
-
-const packageGithub = 'https://github.com/cavalheri/laravel-brazil-documents'
+const editLinkPattern = `${packageGithub}/edit/main/docs/:path`
 
 const socialLinks = [
   { icon: 'github', link: packageGithub },
@@ -26,13 +23,12 @@ const footerEn = {
 const navVersion = { text: `v${version}`, link: packageGithub }
 
 export default defineConfig({
-  base: process.env.VITEPRESS_BASE ?? '/',
+  base: '/',
   vite: {
     define: {
       __PACKAGE_VERSION__: JSON.stringify(version),
     },
   },
-  head: [['link', { rel: 'icon', href: '/laravel-brazil-documents/favicon.ico' }]],
   locales: {
     root: {
       label: 'Português',

@@ -21,7 +21,7 @@ O **`README.md`** é a vitrine do pacote no GitHub e no [Packagist](https://pack
 2. Seção **Installation** com `composer require cavalheri/laravel-brazil-documents`
 3. Versão atual referenciando [`VERSION`](VERSION) ou valor explícito após release
 4. Exemplos de código refletem a API real (`Facade`, `Support`, `Rules`, helpers)
-5. Links de documentação (pt-BR + `/en/`) e [Packagist](https://packagist.org/packages/cavalheri/laravel-brazil-documents)
+5. Links de documentação ([Vercel](https://laravel-brazil-documents.lucascavalheri.com.br) pt-BR + `/en/`) e [Packagist](https://packagist.org/packages/cavalheri/laravel-brazil-documents)
 6. Roadmap alinhado ao escopo (não listar como feito o que não existe)
 
 ## Sincronizar com

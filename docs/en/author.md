@@ -10,5 +10,6 @@
 
 ## Package
 
-- Repository: [cavalheri/laravel-brazil-documents](https://github.com/cavalheri/laravel-brazil-documents)
+- Documentation: [laravel-brazil-documents.lucascavalheri.com.br](https://laravel-brazil-documents.lucascavalheri.com.br)
+- Repository: [LucasCavalheri/laravel-brazil-documents](https://github.com/LucasCavalheri/laravel-brazil-documents)
 - Packagist: [cavalheri/laravel-brazil-documents](https://packagist.org/packages/cavalheri/laravel-brazil-documents) (published)
