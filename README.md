@@ -8,7 +8,7 @@
 
 An elegant, Laravel-first toolkit for validating, formatting, sanitizing, and generating Brazilian documents.
 
-Includes **CPF**, **CNPJ**, **CEP**, and **CNH**. Current version: **1.1.0** (see [`VERSION`](VERSION)). The architecture is prepared for future document types.
+Includes **CPF**, **CNPJ**, **CEP**, **CNH**, and **PIS/PASEP**. Current version: **1.2.0** (see [`VERSION`](VERSION)). The architecture is prepared for future document types.
 
 **Author:** [Lucas Cavalheri](https://lucascavalheri.com.br) · [GitHub](https://github.com/LucasCavalheri) · [LinkedIn](https://linkedin.com/in/lucas-cavalheri)
 
@@ -62,7 +62,7 @@ return [
 ];
 ```
 
-- **helpers** — Registers global `cpf()`, `cnpj()`, `cep()`, and `cnh()` helpers when `true`.
+- **helpers** — Registers global `cpf()`, `cnpj()`, `cep()`, `cnh()`, and `pis()` helpers when `true`.
 - **locale** — Overrides the locale used for validation messages. When `null`, Laravel's current locale is used.
 
 ## Quick Start
@@ -81,6 +81,9 @@ BrazilDocuments::cnpj('11222333000181')->isValid();
 BrazilDocuments::cep('01001000')->format();
 BrazilDocuments::cnh('12345678900')->isValid();
 BrazilDocuments::cnh()->generate();
+
+BrazilDocuments::pis('12056413177')->isValid();
+BrazilDocuments::pis('12056413177')->format();
 ```
 
 ### Support classes
@@ -90,6 +93,7 @@ use Cavalheri\LaravelBrazilDocuments\Support\Cpf;
 use Cavalheri\LaravelBrazilDocuments\Support\Cnpj;
 use Cavalheri\LaravelBrazilDocuments\Support\Cep;
 use Cavalheri\LaravelBrazilDocuments\Support\Cnh;
+use Cavalheri\LaravelBrazilDocuments\Support\Pis;
 
 Cpf::isValid('12345678909');
 Cpf::format('12345678909');
@@ -114,12 +118,14 @@ use Cavalheri\LaravelBrazilDocuments\Rules\Cpf;
 use Cavalheri\LaravelBrazilDocuments\Rules\Cnpj;
 use Cavalheri\LaravelBrazilDocuments\Rules\Cep;
 use Cavalheri\LaravelBrazilDocuments\Rules\Cnh;
+use Cavalheri\LaravelBrazilDocuments\Rules\Pis;
 
 $request->validate([
     'cpf' => ['required', new Cpf],
     'cnpj' => ['required', new Cnpj],
     'cep' => ['required', new Cep],
     'cnh' => ['required', new Cnh],
+    'pis' => ['required', new Pis],
 ]);
 ```
 
@@ -132,6 +138,7 @@ cpf('12345678909')->format();
 cnpj('11222333000181')->format();
 cep('01001000')->format();
 cnh('12345678900')->format();
+pis('12056413177')->format();
 ```
 
 ## Localization

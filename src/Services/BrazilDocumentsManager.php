@@ -8,6 +8,7 @@ use Cavalheri\LaravelBrazilDocuments\Services\Documents\CepHandler;
 use Cavalheri\LaravelBrazilDocuments\Services\Documents\CnhHandler;
 use Cavalheri\LaravelBrazilDocuments\Services\Documents\CnpjHandler;
 use Cavalheri\LaravelBrazilDocuments\Services\Documents\CpfHandler;
+use Cavalheri\LaravelBrazilDocuments\Services\Documents\PisHandler;
 
 final class BrazilDocumentsManager
 {
@@ -29,5 +30,10 @@ final class BrazilDocumentsManager
     public function cnh(?string $value = null): CnhHandler
     {
         return new CnhHandler($value);
+    }
+
+    public function pis(?string $value = null): PisHandler
+    {
+        return new PisHandler($value);
     }
 }

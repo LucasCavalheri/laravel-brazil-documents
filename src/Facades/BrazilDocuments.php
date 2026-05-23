@@ -9,6 +9,7 @@ use Cavalheri\LaravelBrazilDocuments\Services\Documents\CepHandler;
 use Cavalheri\LaravelBrazilDocuments\Services\Documents\CnhHandler;
 use Cavalheri\LaravelBrazilDocuments\Services\Documents\CnpjHandler;
 use Cavalheri\LaravelBrazilDocuments\Services\Documents\CpfHandler;
+use Cavalheri\LaravelBrazilDocuments\Services\Documents\PisHandler;
 use Illuminate\Support\Facades\Facade;
 
 /**
@@ -16,6 +17,7 @@ use Illuminate\Support\Facades\Facade;
  * @method static CnpjHandler cnpj(?string $value = null)
  * @method static CepHandler cep(?string $value = null)
  * @method static CnhHandler cnh(?string $value = null)
+ * @method static PisHandler pis(?string $value = null)
  *
  * @see BrazilDocumentsManager
  */

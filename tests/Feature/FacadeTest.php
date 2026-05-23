@@ -30,3 +30,10 @@ it('exposes cnh through the facade', function () {
         ->and(BrazilDocuments::cnh('123.456.789.00')->sanitize())->toBe('12345678900')
         ->and(BrazilDocuments::cnh()->generate())->toHaveLength(11);
 });
+
+it('exposes pis through the facade', function () {
+    expect(BrazilDocuments::pis('12056413177')->isValid())->toBeTrue()
+        ->and(BrazilDocuments::pis('12056413177')->format())->toBe('120.56413.17-7')
+        ->and(BrazilDocuments::pis('120.56413.17-7')->sanitize())->toBe('12056413177')
+        ->and(BrazilDocuments::pis()->generate())->toHaveLength(11);
+});

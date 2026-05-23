@@ -6,6 +6,7 @@ use Cavalheri\LaravelBrazilDocuments\Rules\Cep;
 use Cavalheri\LaravelBrazilDocuments\Rules\Cnh;
 use Cavalheri\LaravelBrazilDocuments\Rules\Cnpj;
 use Cavalheri\LaravelBrazilDocuments\Rules\Cpf;
+use Cavalheri\LaravelBrazilDocuments\Rules\Pis;
 use Illuminate\Support\Facades\Validator;
 
 it('validates cpf rule', function () {
@@ -67,6 +68,22 @@ it('validates cnh rule', function () {
     $invalid = Validator::make(
         ['cnh' => '11111111111'],
         ['cnh' => ['required', new Cnh]],
+    );
+
+    expect($invalid->fails())->toBeTrue();
+});
+
+it('validates pis rule', function () {
+    $validator = Validator::make(
+        ['pis' => '12056413177'],
+        ['pis' => ['required', new Pis]],
+    );
+
+    expect($validator->passes())->toBeTrue();
+
+    $invalid = Validator::make(
+        ['pis' => '11111111111'],
+        ['pis' => ['required', new Pis]],
     );
 
     expect($invalid->fails())->toBeTrue();

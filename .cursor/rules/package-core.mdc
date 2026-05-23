@@ -15,7 +15,7 @@ Pacote Composer `cavalheri/laravel-brazil-documents` — namespace `Cavalheri\La
 
 ## Escopo atual
 
-CPF, CNPJ, CEP, CNH. Próximos planejados: PIS/PASEP, CNS, título de eleitor, IE, PIX, boleto — só com pedido explícito.
+CPF, CNPJ, CEP, CNH, PIS/PASEP. Próximos planejados: CNS, título de eleitor, IE, PIX, boleto — só com pedido explícito.
 
 ## Princípios
 

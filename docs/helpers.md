@@ -7,10 +7,12 @@ cpf('12345678909')->format();
 cnpj('11222333000181')->format();
 cep('01001000')->format();
 cnh('12345678900')->format();
+pis('12056413177')->format();
 
 cpf()->generate();
 cnpj()->generate();
 cnh()->generate();
+pis()->generate();
 ```
 
 Desative os helpers na config se preferir evitar funções globais:
