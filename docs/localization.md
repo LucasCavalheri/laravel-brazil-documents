@@ -32,3 +32,4 @@ Os arquivos são publicados em `lang/vendor/brazil-documents/`.
 | `cep`  | The CEP is invalid.        | O CEP informado é inválido.       |
 | `cnh`  | The CNH is invalid.        | A CNH informada é inválida.       |
 | `pis`  | The PIS/PASEP is invalid.  | O PIS/PASEP informado é inválido. |
+| `cns`  | The CNS is invalid.        | O CNS informado é inválido.       |

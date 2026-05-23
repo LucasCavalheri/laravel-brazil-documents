@@ -60,6 +60,7 @@ export default defineConfig({
               { text: 'CEP', link: '/cep' },
               { text: 'CNH', link: '/cnh' },
               { text: 'PIS/PASEP', link: '/pis' },
+              { text: 'CNS', link: '/cns' },
             ],
           },
           {
@@ -116,6 +117,7 @@ export default defineConfig({
               { text: 'CEP', link: '/en/cep' },
               { text: 'CNH', link: '/en/cnh' },
               { text: 'PIS/PASEP', link: '/en/pis' },
+              { text: 'CNS', link: '/en/cns' },
             ],
           },
           {

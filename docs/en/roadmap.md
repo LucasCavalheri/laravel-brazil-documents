@@ -9,12 +9,12 @@
 | CEP | Validate, format, sanitize |
 | CNH | Validate, format, sanitize, generate (registration number) |
 | PIS/PASEP | Validate, format, sanitize, generate (NIS) |
+| CNS | Validate, format, sanitize, generate (definitive and provisional) |
 
 ## Planned
 
 | Document | Scope |
 | -------- | ----- |
-| CNS | National health card algorithm |
 | Voter ID | Voter registration validation |
 | State registration | Per-state (UF) strategies |
 | PIX keys | Email, phone, EVP, CPF/CNPJ |

@@ -8,11 +8,13 @@ cnpj('11222333000181')->format();
 cep('01001000')->format();
 cnh('12345678900')->format();
 pis('12056413177')->format();
+cns('279802393660003')->format();
 
 cpf()->generate();
 cnpj()->generate();
 cnh()->generate();
 pis()->generate();
+cns()->generate();
 ```
 
 Disable helpers in config if you prefer to avoid global functions:

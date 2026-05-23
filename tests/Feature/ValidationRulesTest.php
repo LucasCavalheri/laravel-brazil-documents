@@ -6,6 +6,7 @@ use Cavalheri\LaravelBrazilDocuments\Rules\Cep;
 use Cavalheri\LaravelBrazilDocuments\Rules\Cnh;
 use Cavalheri\LaravelBrazilDocuments\Rules\Cnpj;
 use Cavalheri\LaravelBrazilDocuments\Rules\Cpf;
+use Cavalheri\LaravelBrazilDocuments\Rules\Cns;
 use Cavalheri\LaravelBrazilDocuments\Rules\Pis;
 use Illuminate\Support\Facades\Validator;
 
@@ -84,6 +85,22 @@ it('validates pis rule', function () {
     $invalid = Validator::make(
         ['pis' => '11111111111'],
         ['pis' => ['required', new Pis]],
+    );
+
+    expect($invalid->fails())->toBeTrue();
+});
+
+it('validates cns rule', function () {
+    $validator = Validator::make(
+        ['cns' => '279802393660003'],
+        ['cns' => ['required', new Cns]],
+    );
+
+    expect($validator->passes())->toBeTrue();
+
+    $invalid = Validator::make(
+        ['cns' => str_repeat('1', 15)],
+        ['cns' => ['required', new Cns]],
     );
 
     expect($invalid->fails())->toBeTrue();

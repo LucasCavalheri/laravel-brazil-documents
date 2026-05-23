@@ -6,6 +6,7 @@ use Cavalheri\LaravelBrazilDocuments\ValueObjects\CepValue;
 use Cavalheri\LaravelBrazilDocuments\ValueObjects\CnhValue;
 use Cavalheri\LaravelBrazilDocuments\ValueObjects\CnpjValue;
 use Cavalheri\LaravelBrazilDocuments\ValueObjects\CpfValue;
+use Cavalheri\LaravelBrazilDocuments\ValueObjects\CnsValue;
 use Cavalheri\LaravelBrazilDocuments\ValueObjects\PisValue;
 
 it('exposes cpf value object api', function () {
@@ -47,4 +48,12 @@ it('exposes pis value object api', function () {
     expect($pis->isValid())->toBeTrue()
         ->and($pis->formatted())->toBe('120.56413.17-7')
         ->and(PisValue::from('120.56413.17-7')->sanitized())->toBe('12056413177');
+});
+
+it('exposes cns value object api', function () {
+    $cns = CnsValue::from('279802393660003');
+
+    expect($cns->isValid())->toBeTrue()
+        ->and($cns->formatted())->toBe('279 8023 9366 0003')
+        ->and(CnsValue::from('279 8023 9366 0003')->sanitized())->toBe('279802393660003');
 });

@@ -37,3 +37,10 @@ it('exposes pis through the facade', function () {
         ->and(BrazilDocuments::pis('120.56413.17-7')->sanitize())->toBe('12056413177')
         ->and(BrazilDocuments::pis()->generate())->toHaveLength(11);
 });
+
+it('exposes cns through the facade', function () {
+    expect(BrazilDocuments::cns('279802393660003')->isValid())->toBeTrue()
+        ->and(BrazilDocuments::cns('279802393660003')->format())->toBe('279 8023 9366 0003')
+        ->and(BrazilDocuments::cns('279 8023 9366 0003')->sanitize())->toBe('279802393660003')
+        ->and(BrazilDocuments::cns()->generate())->toHaveLength(15);
+});
