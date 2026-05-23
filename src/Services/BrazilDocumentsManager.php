@@ -10,6 +10,7 @@ use Cavalheri\LaravelBrazilDocuments\Services\Documents\CnpjHandler;
 use Cavalheri\LaravelBrazilDocuments\Services\Documents\CpfHandler;
 use Cavalheri\LaravelBrazilDocuments\Services\Documents\CnsHandler;
 use Cavalheri\LaravelBrazilDocuments\Services\Documents\PisHandler;
+use Cavalheri\LaravelBrazilDocuments\Services\Documents\TituloEleitorHandler;
 
 final class BrazilDocumentsManager
 {
@@ -41,5 +42,10 @@ final class BrazilDocumentsManager
     public function cns(?string $value = null): CnsHandler
     {
         return new CnsHandler($value);
+    }
+
+    public function tituloEleitor(?string $value = null): TituloEleitorHandler
+    {
+        return new TituloEleitorHandler($value);
     }
 }

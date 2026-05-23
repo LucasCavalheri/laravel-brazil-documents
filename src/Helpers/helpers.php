@@ -8,6 +8,7 @@ use Cavalheri\LaravelBrazilDocuments\Services\Documents\CnpjHandler;
 use Cavalheri\LaravelBrazilDocuments\Services\Documents\CpfHandler;
 use Cavalheri\LaravelBrazilDocuments\Services\Documents\CnsHandler;
 use Cavalheri\LaravelBrazilDocuments\Services\Documents\PisHandler;
+use Cavalheri\LaravelBrazilDocuments\Services\Documents\TituloEleitorHandler;
 
 if (! function_exists('cpf')) {
     function cpf(?string $value = null): CpfHandler
@@ -48,5 +49,12 @@ if (! function_exists('cns')) {
     function cns(?string $value = null): CnsHandler
     {
         return new CnsHandler($value);
+    }
+}
+
+if (! function_exists('tituloEleitor')) {
+    function tituloEleitor(?string $value = null): TituloEleitorHandler
+    {
+        return new TituloEleitorHandler($value);
     }
 }

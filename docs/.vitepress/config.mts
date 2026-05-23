@@ -61,6 +61,7 @@ export default defineConfig({
               { text: 'CNH', link: '/cnh' },
               { text: 'PIS/PASEP', link: '/pis' },
               { text: 'CNS', link: '/cns' },
+              { text: 'Título de eleitor', link: '/titulo-eleitor' },
             ],
           },
           {
@@ -118,6 +119,7 @@ export default defineConfig({
               { text: 'CNH', link: '/en/cnh' },
               { text: 'PIS/PASEP', link: '/en/pis' },
               { text: 'CNS', link: '/en/cns' },
+              { text: 'Voter ID', link: '/en/titulo-eleitor' },
             ],
           },
           {

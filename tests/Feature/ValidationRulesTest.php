@@ -8,6 +8,7 @@ use Cavalheri\LaravelBrazilDocuments\Rules\Cnpj;
 use Cavalheri\LaravelBrazilDocuments\Rules\Cpf;
 use Cavalheri\LaravelBrazilDocuments\Rules\Cns;
 use Cavalheri\LaravelBrazilDocuments\Rules\Pis;
+use Cavalheri\LaravelBrazilDocuments\Rules\TituloEleitor;
 use Illuminate\Support\Facades\Validator;
 
 it('validates cpf rule', function () {
@@ -101,6 +102,22 @@ it('validates cns rule', function () {
     $invalid = Validator::make(
         ['cns' => str_repeat('1', 15)],
         ['cns' => ['required', new Cns]],
+    );
+
+    expect($invalid->fails())->toBeTrue();
+});
+
+it('validates titulo eleitor rule', function () {
+    $validator = Validator::make(
+        ['titulo_eleitor' => '825169091279'],
+        ['titulo_eleitor' => ['required', new TituloEleitor]],
+    );
+
+    expect($validator->passes())->toBeTrue();
+
+    $invalid = Validator::make(
+        ['titulo_eleitor' => str_repeat('1', 12)],
+        ['titulo_eleitor' => ['required', new TituloEleitor]],
     );
 
     expect($invalid->fails())->toBeTrue();

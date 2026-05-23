@@ -44,3 +44,10 @@ it('exposes cns through the facade', function () {
         ->and(BrazilDocuments::cns('279 8023 9366 0003')->sanitize())->toBe('279802393660003')
         ->and(BrazilDocuments::cns()->generate())->toHaveLength(15);
 });
+
+it('exposes titulo eleitor through the facade', function () {
+    expect(BrazilDocuments::tituloEleitor('825169091279')->isValid())->toBeTrue()
+        ->and(BrazilDocuments::tituloEleitor('825169091279')->format())->toBe('8251 6909 1279')
+        ->and(BrazilDocuments::tituloEleitor('8251 6909 1279')->sanitize())->toBe('825169091279')
+        ->and(BrazilDocuments::tituloEleitor()->generate())->toHaveLength(12);
+});

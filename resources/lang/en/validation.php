@@ -9,4 +9,5 @@ return [
     'cnh' => 'The CNH is invalid.',
     'pis' => 'The PIS/PASEP is invalid.',
     'cns' => 'The CNS is invalid.',
+    'titulo_eleitor' => 'The voter ID is invalid.',
 ];

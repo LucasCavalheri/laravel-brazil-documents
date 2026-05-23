@@ -8,6 +8,7 @@ use Cavalheri\LaravelBrazilDocuments\ValueObjects\CnpjValue;
 use Cavalheri\LaravelBrazilDocuments\ValueObjects\CpfValue;
 use Cavalheri\LaravelBrazilDocuments\ValueObjects\CnsValue;
 use Cavalheri\LaravelBrazilDocuments\ValueObjects\PisValue;
+use Cavalheri\LaravelBrazilDocuments\ValueObjects\TituloEleitorValue;
 
 it('exposes cpf value object api', function () {
     $cpf = CpfValue::from('12345678909');
@@ -56,4 +57,12 @@ it('exposes cns value object api', function () {
     expect($cns->isValid())->toBeTrue()
         ->and($cns->formatted())->toBe('279 8023 9366 0003')
         ->and(CnsValue::from('279 8023 9366 0003')->sanitized())->toBe('279802393660003');
+});
+
+it('exposes titulo eleitor value object api', function () {
+    $titulo = TituloEleitorValue::from('825169091279');
+
+    expect($titulo->isValid())->toBeTrue()
+        ->and($titulo->formatted())->toBe('8251 6909 1279')
+        ->and(TituloEleitorValue::from('8251 6909 1279')->sanitized())->toBe('825169091279');
 });

@@ -9,4 +9,5 @@ return [
     'cnh' => 'A CNH informada é inválida.',
     'pis' => 'O PIS/PASEP informado é inválido.',
     'cns' => 'O CNS informado é inválido.',
+    'titulo_eleitor' => 'O título de eleitor informado é inválido.',
 ];
