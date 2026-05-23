@@ -1,0 +1,43 @@
+---
+description: Padrão para adicionar ou alterar documentos brasileiros no pacote
+globs: src/**/*.php
+alwaysApply: false
+---
+
+# Implementação de documentos
+
+## Checklist para novo documento (ex.: CNH)
+
+1. `Support\{Name}.php` — `sanitize`, `isValid`, `format`, `generate` (se aplicável)
+2. `Services/Documents\{Name}Handler.php` — estende `AbstractDocumentHandler`
+3. `ValueObjects\{Name}Value.php` — estende `AbstractDocumentValue`
+4. `Rules\{Name}.php` — `ValidationRule` + trait `ResolvesValidationLocale`
+5. Método em `BrazilDocumentsManager` + entrada na Facade `@method`
+6. Helper em `Helpers/helpers.php` (se gerar documentos)
+7. Traduções em `resources/lang/en/validation.php` e `pt_BR/validation.php`
+8. Testes Pest em `tests/Unit/` e `tests/Feature/`
+9. Docs em `docs/{slug}.md` e `docs/en/{slug}.md`
+
+## Support (fonte da verdade)
+
+```php
+// ✅ Algoritmo e sanitização aqui
+final class Cpf
+{
+    use ValidatesRepeatedDigits;
+
+    public static function sanitize(string $value): string { /* preg_replace \D */ }
+    public static function isValid(?string $value): bool { /* length + repeated + dígitos */ }
+}
+```
+
+Handlers **não** duplicam lógica — delegam ao Support.
+
+## Geração
+
+- CPF/CNPJ: base aleatória + dígitos verificadores; loop se sequência repetida
+- CEP: sem geração na v1
+
+## Exceções
+
+`InvalidDocumentException::missingValue()` quando handler fluente é chamado sem valor (`format`, `sanitize`, `isValid`).

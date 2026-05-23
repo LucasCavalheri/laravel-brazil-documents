@@ -1,0 +1,64 @@
+{
+    "name": "cavalheri/laravel-brazil-documents",
+    "description": "Validation, formatting, sanitization and generation of Brazilian documents for Laravel.",
+    "keywords": [
+        "laravel",
+        "brazil",
+        "cpf",
+        "cnpj",
+        "cep",
+        "documents",
+        "validation"
+    ],
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Lucas Cavalheri",
+            "email": "lucas.dev.carvalho@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.3",
+        "illuminate/contracts": "^13.0",
+        "illuminate/support": "^13.0",
+        "illuminate/translation": "^13.0",
+        "illuminate/validation": "^13.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^11.0",
+        "pestphp/pest": "^3.8"
+    },
+    "autoload": {
+        "psr-4": {
+            "Cavalheri\\LaravelBrazilDocuments\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Cavalheri\\LaravelBrazilDocuments\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Cavalheri\\LaravelBrazilDocuments\\LaravelBrazilDocumentsServiceProvider"
+            ],
+            "aliases": {
+                "BrazilDocuments": "Cavalheri\\LaravelBrazilDocuments\\Facades\\BrazilDocuments"
+            }
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "scripts": {
+        "test": "pest",
+        "test:coverage": "pest --coverage"
+    }
+}

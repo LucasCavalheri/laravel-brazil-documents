@@ -1,0 +1,43 @@
+---
+description: Documentação VitePress bilíngue pt-BR e inglês
+globs: docs/**/*
+alwaysApply: false
+---
+
+# Documentação
+
+## Idiomas
+
+| Locale | Caminho        | URL site      |
+|--------|----------------|---------------|
+| pt-BR (padrão) | `docs/*.md`    | `/`           |
+| English        | `docs/en/*.md` | `/en/`        |
+
+**Sempre atualizar os dois idiomas** ao mudar conteúdo.
+
+## Config
+
+`docs/.vitepress/config.mts` — `locales.root` (pt-BR) e `locales.en`. Nav/sidebar traduzidos em cada locale.
+
+Versão exibida vem de **`VERSION`** (raiz) via `docs/.vitepress/read-version.ts` — nav `v{x}`, footer e `AuthorFooter.vue`.
+
+Links do autor (Lucas Cavalheri): site, GitHub pessoal, LinkedIn — ver `docs/autor.md` e `docs/en/author.md`.
+
+## Home (`index.md`)
+
+Links do hero no locale correto:
+- pt-BR: `link: /installation`
+- en: `link: /en/installation`
+
+## Exemplos de código
+
+Manter snippets PHP idênticos entre idiomas; traduzir apenas títulos e prosa.
+
+## Build
+
+```bash
+npm run docs:dev
+npm run docs:build
+```
+
+Deploy GitHub Pages usa `VITEPRESS_BASE=/laravel-brazil-documents/`.

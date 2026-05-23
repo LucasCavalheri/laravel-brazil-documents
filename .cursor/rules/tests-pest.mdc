@@ -1,0 +1,37 @@
+---
+description: Convenções de testes Pest e Testbench
+globs: tests/**/*
+alwaysApply: false
+---
+
+# Testes
+
+## Setup
+
+- `tests/Pest.php` — `uses(TestCase::class)->in('Feature')`
+- `tests/TestCase.php` — Orchestra Testbench, registra `LaravelBrazilDocumentsServiceProvider`
+- Testes de **Feature** precisam do TestCase (facade, validator, helpers, config)
+- Testes **Unit** em Support/ValueObjects podem rodar sem Laravel
+
+## Padrões
+
+```php
+// ✅ CPF válido de exemplo do README
+expect(Cpf::isValid('12345678909'))->toBeTrue();
+
+// ✅ Sequências repetidas via dataset
+})->with(['11111111111', '00000000000']);
+```
+
+## Ao adicionar documento
+
+- Unit: validação, formatação, sanitização, geração (se houver), inválidos, repetidos
+- Feature: rule, mensagem EN e `pt_BR`, facade, helper (se houver)
+
+## Executar
+
+```bash
+composer test
+```
+
+Não usar `--no-verify` em commits salvo pedido do usuário.

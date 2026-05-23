@@ -1,0 +1,47 @@
+---
+description: Contexto do pacote laravel-brazil-documents e princípios gerais
+alwaysApply: true
+---
+
+# Laravel Brazil Documents
+
+Pacote Composer `cavalheri/laravel-brazil-documents` — namespace `Cavalheri\LaravelBrazilDocuments`.
+
+## Stack
+
+- PHP 8.3+, Laravel 13.x (`illuminate/* ^13.0`)
+- Pest + Orchestra Testbench ^11
+- VitePress para docs (pt-BR padrão em `docs/`, inglês em `docs/en/`)
+
+## Escopo v1
+
+CPF, CNPJ, CEP apenas. Não implementar CNH, PIS, CNS, etc. sem pedido explícito.
+
+## Princípios
+
+- Lógica de algoritmo em `Support\{Document}` (estática, testável)
+- API fluente via `Services/Documents\{Document}Handler` + `BrazilDocumentsManager`
+- Regras Laravel em `Rules\{Document}` delegando ao Support
+- Value Objects imutáveis em `ValueObjects\{Document}Value`
+- Rejeitar sequências repetidas (`11111111111`, `00000000000`)
+- `declare(strict_types=1);` em todo arquivo PHP
+- Classes `final` quando não destinadas à herança
+- Diff mínimo; sem over-engineering; testes só quando agregam valor real
+
+## Versão
+
+- Fonte única: arquivo **`VERSION`** na raiz (semver)
+- Ao mudar versão do pacote, atualizar `VERSION` + `CHANGELOG.md` no mesmo commit
+- Docs leem via `docs/.vitepress/read-version.ts` — não hardcodar versão em markdown
+
+## Comandos
+
+```bash
+composer test          # Pest
+npm run docs:dev       # Docs pt-BR + /en/
+npm run docs:build
+```
+
+## Commits
+
+Só commitar quando o usuário pedir explicitamente.

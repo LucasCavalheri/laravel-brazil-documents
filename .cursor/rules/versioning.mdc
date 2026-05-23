@@ -1,0 +1,27 @@
+---
+description: Arquivo VERSION e sincronização de versão do pacote
+alwaysApply: true
+---
+
+# VERSION
+
+A versão canônica do pacote está em **`VERSION`** na raiz do repositório (semver, uma linha, ex.: `1.0.0`).
+
+## Quando atualizar
+
+Sempre que houver release ou mudança de versão anunciada, **atualize `VERSION` no mesmo PR/commit** que:
+
+- `CHANGELOG.md` (nova seção ou release)
+- Docs VitePress (leem `VERSION` via `docs/.vitepress/read-version.ts` no build)
+- Tag Git semver (quando o usuário publicar)
+
+## O que NÃO fazer
+
+- Duplicar versão hardcoded na nav, footer ou componentes — usar `read-version.ts` + `vite.define`
+- Esquecer de subir `VERSION` ao adicionar features para um minor/patch release
+
+## VitePress
+
+`docs/.vitepress/read-version.ts` lê `VERSION` (somente Node, usado em `config.mts`).
+
+Nav/footer usam a constante `version`; `AuthorFooter.vue` recebe via `__PACKAGE_VERSION__` (vite `define`).
