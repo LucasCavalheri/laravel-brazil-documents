@@ -31,3 +31,4 @@ Os arquivos são publicados em `lang/vendor/brazil-documents/`.
 | `cnpj` | The CNPJ is invalid.       | O CNPJ informado é inválido.      |
 | `cep`  | The CEP is invalid.        | O CEP informado é inválido.       |
 | `cnh`  | The CNH is invalid.        | A CNH informada é inválida.       |
+| `pis`  | The PIS/PASEP is invalid.  | O PIS/PASEP informado é inválido. |

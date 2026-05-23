@@ -7,4 +7,5 @@ return [
     'cnpj' => 'The CNPJ is invalid.',
     'cep' => 'The CEP is invalid.',
     'cnh' => 'The CNH is invalid.',
+    'pis' => 'The PIS/PASEP is invalid.',
 ];

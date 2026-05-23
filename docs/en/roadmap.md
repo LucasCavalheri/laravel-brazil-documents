@@ -8,12 +8,12 @@
 | CNPJ | Validate, format, sanitize, generate |
 | CEP | Validate, format, sanitize |
 | CNH | Validate, format, sanitize, generate (registration number) |
+| PIS/PASEP | Validate, format, sanitize, generate (NIS) |
 
 ## Planned
 
 | Document | Scope |
 | -------- | ----- |
-| PIS/PASEP | Check-digit validation |
 | CNS | National health card algorithm |
 | Voter ID | Voter registration validation |
 | State registration | Per-state (UF) strategies |

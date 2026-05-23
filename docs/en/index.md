@@ -4,7 +4,7 @@ layout: home
 hero:
   name: Laravel Brazil Documents
   text: Brazilian documents for Laravel
-  tagline: Validate, format, sanitize, and generate CPF, CNPJ, CEP, and CNH with a native Laravel developer experience.
+  tagline: Validate, format, sanitize, and generate CPF, CNPJ, CEP, CNH, and PIS/PASEP with a native Laravel developer experience.
   actions:
     - theme: brand
       text: Get Started

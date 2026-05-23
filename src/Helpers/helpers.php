@@ -6,6 +6,7 @@ use Cavalheri\LaravelBrazilDocuments\Services\Documents\CepHandler;
 use Cavalheri\LaravelBrazilDocuments\Services\Documents\CnhHandler;
 use Cavalheri\LaravelBrazilDocuments\Services\Documents\CnpjHandler;
 use Cavalheri\LaravelBrazilDocuments\Services\Documents\CpfHandler;
+use Cavalheri\LaravelBrazilDocuments\Services\Documents\PisHandler;
 
 if (! function_exists('cpf')) {
     function cpf(?string $value = null): CpfHandler
@@ -32,5 +33,12 @@ if (! function_exists('cnh')) {
     function cnh(?string $value = null): CnhHandler
     {
         return new CnhHandler($value);
+    }
+}
+
+if (! function_exists('pis')) {
+    function pis(?string $value = null): PisHandler
+    {
+        return new PisHandler($value);
     }
 }
