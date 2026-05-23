@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 use Cavalheri\LaravelBrazilDocuments\Rules\Cep;
+use Cavalheri\LaravelBrazilDocuments\Rules\Cnh;
 use Cavalheri\LaravelBrazilDocuments\Rules\Cnpj;
 use Cavalheri\LaravelBrazilDocuments\Rules\Cpf;
 use Illuminate\Support\Facades\Validator;
@@ -50,6 +51,22 @@ it('validates cep rule', function () {
     $invalid = Validator::make(
         ['cep' => '11111111'],
         ['cep' => ['required', new Cep]],
+    );
+
+    expect($invalid->fails())->toBeTrue();
+});
+
+it('validates cnh rule', function () {
+    $validator = Validator::make(
+        ['cnh' => '12345678900'],
+        ['cnh' => ['required', new Cnh]],
+    );
+
+    expect($validator->passes())->toBeTrue();
+
+    $invalid = Validator::make(
+        ['cnh' => '11111111111'],
+        ['cnh' => ['required', new Cnh]],
     );
 
     expect($invalid->fails())->toBeTrue();

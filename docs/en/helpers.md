@@ -6,9 +6,11 @@ When `config('brazil-documents.helpers')` is `true` (default), these functions a
 cpf('12345678909')->format();
 cnpj('11222333000181')->format();
 cep('01001000')->format();
+cnh('12345678900')->format();
 
 cpf()->generate();
 cnpj()->generate();
+cnh()->generate();
 ```
 
 Disable helpers in config if you prefer to avoid global functions:

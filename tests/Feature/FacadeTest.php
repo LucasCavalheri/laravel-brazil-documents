@@ -23,3 +23,10 @@ it('exposes cep through the facade', function () {
         ->and(BrazilDocuments::cep('01001000')->format())->toBe('01001-000')
         ->and(BrazilDocuments::cep('01001-000')->sanitize())->toBe('01001000');
 });
+
+it('exposes cnh through the facade', function () {
+    expect(BrazilDocuments::cnh('12345678900')->isValid())->toBeTrue()
+        ->and(BrazilDocuments::cnh('12345678900')->format())->toBe('123.456.789.00')
+        ->and(BrazilDocuments::cnh('123.456.789.00')->sanitize())->toBe('12345678900')
+        ->and(BrazilDocuments::cnh()->generate())->toHaveLength(11);
+});

@@ -1,12 +1,18 @@
 # Roadmap
 
-A versão 1 inclui **CPF**, **CNPJ** e **CEP**.
+## Disponível
+
+| Documento | Recursos |
+| --------- | -------- |
+| CPF | Validar, formatar, sanitizar, gerar |
+| CNPJ | Validar, formatar, sanitizar, gerar |
+| CEP | Validar, formatar, sanitizar |
+| CNH | Validar, formatar, sanitizar, gerar (número de registro) |
 
 ## Planejado
 
 | Documento           | Escopo                                              |
 | ------------------- | --------------------------------------------------- |
-| CNH                 | Validação de número conforme regras por estado      |
 | PIS/PASEP           | Validação de dígito verificador                     |
 | CNS                 | Algoritmo do cartão nacional de saúde               |
 | Título de eleitor   | Validação de título de eleitor                      |

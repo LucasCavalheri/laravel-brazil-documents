@@ -58,6 +58,7 @@ export default defineConfig({
               { text: 'CPF', link: '/cpf' },
               { text: 'CNPJ', link: '/cnpj' },
               { text: 'CEP', link: '/cep' },
+              { text: 'CNH', link: '/cnh' },
             ],
           },
           {
@@ -112,6 +113,7 @@ export default defineConfig({
               { text: 'CPF', link: '/en/cpf' },
               { text: 'CNPJ', link: '/en/cnpj' },
               { text: 'CEP', link: '/en/cep' },
+              { text: 'CNH', link: '/en/cnh' },
             ],
           },
           {
