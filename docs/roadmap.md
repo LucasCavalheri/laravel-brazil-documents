@@ -9,12 +9,12 @@
 | CEP | Validar, formatar, sanitizar |
 | CNH | Validar, formatar, sanitizar, gerar (número de registro) |
 | PIS/PASEP | Validar, formatar, sanitizar, gerar (NIS) |
+| CNS | Validar, formatar, sanitizar, gerar (definitivo e provisório) |
 
 ## Planejado
 
 | Documento           | Escopo                                              |
 | ------------------- | --------------------------------------------------- |
-| CNS                 | Algoritmo do cartão nacional de saúde               |
 | Título de eleitor   | Validação de título de eleitor                      |
 | Inscrição estadual  | Estratégias por UF (SP, MG, etc.)                   |
 | Chaves PIX          | E-mail, telefone, EVP, CPF/CNPJ                     |
