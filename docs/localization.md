@@ -30,3 +30,4 @@ Os arquivos são publicados em `lang/vendor/brazil-documents/`.
 | `cpf`  | The CPF is invalid.        | O CPF informado é inválido.       |
 | `cnpj` | The CNPJ is invalid.       | O CNPJ informado é inválido.      |
 | `cep`  | The CEP is invalid.        | O CEP informado é inválido.       |
+| `cnh`  | The CNH is invalid.        | A CNH informada é inválida.       |

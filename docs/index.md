@@ -4,7 +4,7 @@ layout: home
 hero:
   name: Laravel Brazil Documents
   text: Documentos brasileiros para Laravel
-  tagline: Valide, formate, sanitize e gere CPF, CNPJ e CEP com uma experiência nativa ao ecossistema Laravel.
+  tagline: Valide, formate, sanitize e gere CPF, CNPJ, CEP e CNH com uma experiência nativa ao ecossistema Laravel.
   actions:
     - theme: brand
       text: Começar

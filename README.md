@@ -8,7 +8,7 @@
 
 An elegant, Laravel-first toolkit for validating, formatting, sanitizing, and generating Brazilian documents.
 
-**Version 1** includes **CPF**, **CNPJ**, and **CEP**. Current version: **1.0.1** (see [`VERSION`](VERSION)). The architecture is prepared for future document types.
+Includes **CPF**, **CNPJ**, **CEP**, and **CNH**. Current version: **1.1.0** (see [`VERSION`](VERSION)). The architecture is prepared for future document types.
 
 **Author:** [Lucas Cavalheri](https://lucascavalheri.com.br) · [GitHub](https://github.com/LucasCavalheri) · [LinkedIn](https://linkedin.com/in/lucas-cavalheri)
 
@@ -62,7 +62,7 @@ return [
 ];
 ```
 
-- **helpers** — Registers global `cpf()`, `cnpj()`, and `cep()` helpers when `true`.
+- **helpers** — Registers global `cpf()`, `cnpj()`, `cep()`, and `cnh()` helpers when `true`.
 - **locale** — Overrides the locale used for validation messages. When `null`, Laravel's current locale is used.
 
 ## Quick Start
@@ -79,6 +79,8 @@ BrazilDocuments::cpf()->generate();
 
 BrazilDocuments::cnpj('11222333000181')->isValid();
 BrazilDocuments::cep('01001000')->format();
+BrazilDocuments::cnh('12345678900')->isValid();
+BrazilDocuments::cnh()->generate();
 ```
 
 ### Support classes
@@ -87,6 +89,7 @@ BrazilDocuments::cep('01001000')->format();
 use Cavalheri\LaravelBrazilDocuments\Support\Cpf;
 use Cavalheri\LaravelBrazilDocuments\Support\Cnpj;
 use Cavalheri\LaravelBrazilDocuments\Support\Cep;
+use Cavalheri\LaravelBrazilDocuments\Support\Cnh;
 
 Cpf::isValid('12345678909');
 Cpf::format('12345678909');
@@ -110,11 +113,13 @@ CpfValue::from('12345678909')->isValid();
 use Cavalheri\LaravelBrazilDocuments\Rules\Cpf;
 use Cavalheri\LaravelBrazilDocuments\Rules\Cnpj;
 use Cavalheri\LaravelBrazilDocuments\Rules\Cep;
+use Cavalheri\LaravelBrazilDocuments\Rules\Cnh;
 
 $request->validate([
     'cpf' => ['required', new Cpf],
     'cnpj' => ['required', new Cnpj],
     'cep' => ['required', new Cep],
+    'cnh' => ['required', new Cnh],
 ]);
 ```
 
@@ -126,6 +131,7 @@ When enabled in config:
 cpf('12345678909')->format();
 cnpj('11222333000181')->format();
 cep('01001000')->format();
+cnh('12345678900')->format();
 ```
 
 ## Localization
@@ -195,7 +201,6 @@ tests/
 
 Planned document types for future releases:
 
-- CNH (driver license)
 - PIS/PASEP
 - CNS (national health card)
 - Voter ID (Título de Eleitor)

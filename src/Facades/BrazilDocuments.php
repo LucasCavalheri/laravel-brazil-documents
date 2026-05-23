@@ -6,6 +6,7 @@ namespace Cavalheri\LaravelBrazilDocuments\Facades;
 
 use Cavalheri\LaravelBrazilDocuments\Services\BrazilDocumentsManager;
 use Cavalheri\LaravelBrazilDocuments\Services\Documents\CepHandler;
+use Cavalheri\LaravelBrazilDocuments\Services\Documents\CnhHandler;
 use Cavalheri\LaravelBrazilDocuments\Services\Documents\CnpjHandler;
 use Cavalheri\LaravelBrazilDocuments\Services\Documents\CpfHandler;
 use Illuminate\Support\Facades\Facade;
@@ -14,6 +15,7 @@ use Illuminate\Support\Facades\Facade;
  * @method static CpfHandler cpf(?string $value = null)
  * @method static CnpjHandler cnpj(?string $value = null)
  * @method static CepHandler cep(?string $value = null)
+ * @method static CnhHandler cnh(?string $value = null)
  *
  * @see BrazilDocumentsManager
  */

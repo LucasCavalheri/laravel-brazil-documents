@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Cavalheri\LaravelBrazilDocuments\Services;
 
 use Cavalheri\LaravelBrazilDocuments\Services\Documents\CepHandler;
+use Cavalheri\LaravelBrazilDocuments\Services\Documents\CnhHandler;
 use Cavalheri\LaravelBrazilDocuments\Services\Documents\CnpjHandler;
 use Cavalheri\LaravelBrazilDocuments\Services\Documents\CpfHandler;
 
@@ -23,5 +24,10 @@ final class BrazilDocumentsManager
     public function cep(?string $value = null): CepHandler
     {
         return new CepHandler($value);
+    }
+
+    public function cnh(?string $value = null): CnhHandler
+    {
+        return new CnhHandler($value);
     }
 }

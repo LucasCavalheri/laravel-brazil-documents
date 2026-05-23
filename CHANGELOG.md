@@ -7,6 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.1.0] - 2026-05-23
+
+### Added
+
+- CNH registration number validation, formatting, sanitization, and generation
+- `Support\Cnh`, `CnhValue`, `Rules\Cnh`, `cnh()` helper, and `BrazilDocuments::cnh()` facade API
+- English and Brazilian Portuguese validation messages for CNH
+- Documentation pages for CNH (pt-BR and English)
+
 ## [1.0.1] - 2026-05-23
 
 ### Changed
@@ -41,6 +50,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Rejection of repeated digit sequences (e.g. `11111111111`)
 - Pest test suite with Orchestra Testbench for Laravel 13
 
-[Unreleased]: https://github.com/LucasCavalheri/laravel-brazil-documents/compare/v1.0.1...HEAD
+[Unreleased]: https://github.com/LucasCavalheri/laravel-brazil-documents/compare/v1.1.0...HEAD
+[1.1.0]: https://github.com/LucasCavalheri/laravel-brazil-documents/compare/v1.0.1...v1.1.0
 [1.0.1]: https://github.com/LucasCavalheri/laravel-brazil-documents/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/LucasCavalheri/laravel-brazil-documents/releases/tag/v1.0.0

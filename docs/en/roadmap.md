@@ -1,17 +1,23 @@
 # Roadmap
 
-Version 1 ships **CPF**, **CNPJ**, and **CEP**.
+## Available
+
+| Document | Features |
+| -------- | -------- |
+| CPF | Validate, format, sanitize, generate |
+| CNPJ | Validate, format, sanitize, generate |
+| CEP | Validate, format, sanitize |
+| CNH | Validate, format, sanitize, generate (registration number) |
 
 ## Planned
 
-| Document              | Scope                                      |
-| --------------------- | ------------------------------------------ |
-| CNH                   | Number validation by state rules           |
-| PIS/PASEP             | Check-digit validation                     |
-| CNS                   | National health card algorithm             |
-| Voter ID              | Título de eleitor validation               |
-| State registration    | Per-UF inscrição estadual strategies       |
-| PIX keys              | Email, phone, EVP, CPF/CNPJ                |
-| Boleto                | Linha digitável and barcode validation     |
+| Document | Scope |
+| -------- | ----- |
+| PIS/PASEP | Check-digit validation |
+| CNS | National health card algorithm |
+| Voter ID | Voter registration validation |
+| State registration | Per-state (UF) strategies |
+| PIX keys | Email, phone, EVP, CPF/CNPJ |
+| Boleto | Linha digitável and barcode (FEBRABAN) |
 
-Each new document will follow the same pattern: Support class, handler, value object, rule, translations, and tests.
+Each new document follows the same pattern: Support class, handler, value object, rule, translations, and tests.
